@@ -1,4 +1,5 @@
 $("document").ready(function () {
+    
     console.log('Ready');
     // let ebaySearchWord = "captain america"
     //FindItems
@@ -37,15 +38,15 @@ $("document").ready(function () {
             success: handleData
 
 
-        }).then(function (response) {
-            // // console.log(response);
-            // let test = response.split(",")
-            // test = JSON.parse(test);
-            // console.log(test);
-            // // DisplayEbayResultsSimple(test);
-            // DisplayEbayResultsAdvanced(test);
+        // }).then(function (response) {
+        //     // // console.log(response);
+        //     // let test = response.split(",")
+        //     // test = JSON.parse(test);
+        //     // console.log(test);
+        //     // // DisplayEbayResultsSimple(test);
+        //     // DisplayEbayResultsAdvanced(test);
         });
-    });
+    };
     
     function callSimple() {
         $.ajax({
