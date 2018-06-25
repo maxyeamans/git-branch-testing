@@ -13,7 +13,7 @@ $("document").ready(function () {
         // ebaySearchWord += " comics";
         console.log(ebaySearchWord);
         $("#search").val("");
-        queryUrl = "http://open.api.ebay.com/shopping?version=515&callname=FindItemsAdvanced&appid=ChanceMu-ClassPro-PRD-667ac8c8b-ab199383&QueryKeywords=" + ebaySearchWord + "&ItemSort=PricePlusShipping&SortOrder=Descending&CategoryID=63&responseencoding=JSON&MaxEntries=5";
+        queryUrl = "https://open.api.ebay.com/shopping?version=515&callname=FindItemsAdvanced&appid=ChanceMu-ClassPro-PRD-667ac8c8b-ab199383&QueryKeywords=" + ebaySearchWord + "&ItemSort=PricePlusShipping&SortOrder=Descending&CategoryID=63&responseencoding=JSON&MaxEntries=5";
         //PricePlusShipping //BestMatch
         $(".ebayRow").css("visibility", "hidden");
         $(".ebayRow").addClass("hideMe");
@@ -37,14 +37,14 @@ $("document").ready(function () {
             success: handleData
 
 
-        // }).then(function (response) {
-        //     // console.log(response);
-        //     let test = response.split(",")
-        //     test = JSON.parse(test);
-        //     console.log(test);
-        //     // DisplayEbayResultsSimple(test);
-        //     DisplayEbayResultsAdvanced(test);
-        // });
+        }).then(function (response) {
+            // // console.log(response);
+            // let test = response.split(",")
+            // test = JSON.parse(test);
+            // console.log(test);
+            // // DisplayEbayResultsSimple(test);
+            // DisplayEbayResultsAdvanced(test);
+        });
     });
     
     function callSimple() {
