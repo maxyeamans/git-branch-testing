@@ -25,21 +25,28 @@ $("document").ready(function () {
 
     });
 
+    function handleData( data ) {
+        console.log(data);
+    };
+
     function callAdvanced() {
         $.ajax({
-            dataType: "jsonp",
+            // dataType: "jsonp",
             url: queryUrl,
             method: "GET",
+            success: handleData
 
-        }).then(function (response) {
-            // console.log(response);
-            let test = response.split(",")
-            test = JSON.parse(test);
-            console.log(test);
-            // DisplayEbayResultsSimple(test);
-            DisplayEbayResultsAdvanced(test);
-        });
-    };
+
+        // }).then(function (response) {
+        //     // console.log(response);
+        //     let test = response.split(",")
+        //     test = JSON.parse(test);
+        //     console.log(test);
+        //     // DisplayEbayResultsSimple(test);
+        //     DisplayEbayResultsAdvanced(test);
+        // });
+    });
+    
     function callSimple() {
         $.ajax({
             dataType: "jsonp",
