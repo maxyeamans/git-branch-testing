@@ -27,6 +27,7 @@ $("document").ready(function () {
 
     function callAdvanced() {
         $.ajax({
+            dataType: "jsonp",
             url: queryUrl,
             method: "GET",
 
@@ -41,6 +42,7 @@ $("document").ready(function () {
     };
     function callSimple() {
         $.ajax({
+            dataType: "jsonp",
             url: queryUrl,
             method: "GET",
 
